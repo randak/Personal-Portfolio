@@ -1,0 +1,4 @@
+kristian_randall_portfolio:
+    resource: "@KristianRandallPortfolioBundle/Resources/config/routing.yml"
+    prefix:   /
+

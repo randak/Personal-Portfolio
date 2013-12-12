@@ -1,0 +1,13 @@
+portfolio:
+  pattern:  /
+  defaults: { _controller: KristianRandallPortfolioBundle:Default:index }
+    
+page:
+  pattern: /{page}
+  defaults: { _controller: KristianRandallPortfolioBundle:Page:index }
+  requirements:
+    page: about|contact
+
+project:
+  pattern: /projects/{slug}
+  defaults: { _controller: KristianRandallPortfolioBundle:Project:index }

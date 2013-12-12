@@ -1,0 +1,108 @@
+@import "reset.less";
+@import "fonts.less";
+@import "params.less";
+@import "mediaquery.less";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  .media('font-size', 'fs-medium');
+  font-family: @ff-body;
+  font-weight: normal;
+  color: @c-primary; 
+  width: 90%;
+  max-width: 1400px;
+  min-width: 480px;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: @ff-header;
+  font-weight: normal;
+}
+
+.header-block {
+  margin: 0.7rem auto 4rem auto;
+  text-align: center;
+  
+  h1 {
+    .media('font-size', 'fs-large');
+    
+    img#portfolio-logo {
+      .media('width', 'logo-width');
+    }
+  }
+}
+
+nav {
+  .media('font-size', 'fs-medium');
+  font-family: @ff-header;
+  
+  a {
+    text-decoration: none;
+    color: @c-primary;
+    line-height: @lh-nav;
+  }
+}
+
+.content {
+  width: 70%;
+  margin: 0 auto;
+  
+  .slider {
+    width: 100%;
+    background-color: @c-primary-trans;
+    border: 1.5rem solid @c-primary;
+    padding: 10%;
+    position: relative;
+    
+    .nav-arrow {
+      position: absolute;
+      top: 42.5%;
+      cursor: pointer;
+    }
+    
+    .left-arrow {
+      left: 0;
+    }
+    
+    .right-arrow {
+      right: 0;
+    }
+    
+    .container {
+      background-color: white;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+  h2 {
+    margin-bottom: 1rem;
+  }
+  nav {
+    border-top: 0.1rem solid @c-primary;
+    display: inline-block;
+    text-align: center;
+    .media('font-size', 'fs-medium');
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  nav {
+    float: right;
+    border-left: 0.2rem solid @c-primary;
+    padding-left: 0.5rem;
+    
+    a {
+      display: block;
+      text-align: left;
+    }
+  }
+
+}
