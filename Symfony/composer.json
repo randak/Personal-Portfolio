@@ -20,7 +20,8 @@
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
         "leafo/lessphp": "*",
-        "propel/propel-bundle": "1.*"
+        "propel/propel-bundle": "1.*",
+        "squizlabs/php_codesniffer": "*"
     },
     "scripts": {
         "post-install-cmd": [
