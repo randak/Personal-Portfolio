@@ -1,0 +1,7 @@
+parameters:
+#    kristian_randall_portfolio.example.class: Randak\Personal\PortfolioBundle\Example
+
+services:
+#    kristian_randall_portfolio.example:
+#        class: %kristian_randall_portfolio.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

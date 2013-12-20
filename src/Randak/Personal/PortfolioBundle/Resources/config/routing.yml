@@ -1,0 +1,13 @@
+portfolio:
+  pattern:  /
+  defaults: { _controller: RandakPortfolioBundle:Default:index }
+    
+page:
+  pattern: /{page}
+  defaults: { _controller: RandakPortfolioBundle:Page:single }
+  requirements:
+    page: about|contact
+
+project:
+  pattern: /projects/{slug}
+  defaults: { _controller: RandakPortfolioBundle:Project:index }

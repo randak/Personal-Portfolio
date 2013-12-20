@@ -1,0 +1,16 @@
+@import "mediaparams";
+@import "mediaguards";
+
+.media(@attr, @parameter) {
+  @media @m-small {
+    .small(@attr, @parameter);
+  }
+  
+  @media @m-medium {
+    .medium(@attr, @parameter);
+  }
+  
+  @media @m-large {
+    .large(@attr, @parameter);
+  }
+}

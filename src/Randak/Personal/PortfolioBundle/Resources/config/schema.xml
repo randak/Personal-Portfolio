@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<database name="portfolio" namespace="Randak\Personal\PortfolioBundle\Model">
+    <table name="category">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="name" type="varchar" primaryString="true" size="100" required="true"/>
+        <column name="description" type="longvarchar"/>
+    </table>
+
+    <table name="project">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="slug" type="varchar" size="20" required="true"/>
+        <column name="name" type="varchar" primaryString="true" size="100" required="true"/>
+        <column name="content" type="longvarchar"/>
+        <column name="date" type="date"/>
+        <unique>
+            <unique-column name="slug" />
+        </unique>
+    </table>
+
+    <table name="project_image">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="project_id" type="integer" required="true"/>
+        <column name="file" type="varchar" size="20" required="true"/>
+        <column name="title" type="varchar" size="100" required="true"/>
+        <column name="description" type="longvarchar"/>
+        <foreign-key foreignTable="project">
+            <reference local="project_id" foreign="id"/>
+        </foreign-key>
+    </table>
+
+    <table name="project_category" isCrossRef="true">
+        <column name="project_id" type="integer" primaryKey="true"/>
+        <column name="category_id" type="integer" primaryKey="true"/>
+        <foreign-key foreignTable="project">
+            <reference local="project_id" foreign="id"/>
+        </foreign-key>
+        <foreign-key foreignTable="category">
+            <reference local="category_id" foreign="id"/>
+        </foreign-key>
+    </table>
+</database>

@@ -1,0 +1,37 @@
+@import-once "mediaguards";
+
+.small(@attr, @parameter) {
+  @fs-small   : 1.4rem;
+  @fs-medium  : 2.0rem;
+  @fs-large   : 3.4rem;
+  
+  @logo-width : 10rem;
+
+  @va-name    : -1rem;
+  
+  .guards();
+}
+
+.medium(@attr, @parameter) {
+  @fs-small   : 1.4rem;
+  @fs-medium  : 2.4rem;
+  @fs-large   : 3.8rem;
+  
+  @logo-width : 12rem;
+
+  @va-name     : -2rem;
+
+  .guards();
+}
+
+.large(@attr, @parameter) {
+  @fs-small   : 1.4rem;
+  @fs-medium  : 1.8rem;
+  @fs-large   : 5rem;
+  
+  @logo-width : auto;
+
+  @va-name    : -4.5rem;
+
+  .guards();
+}

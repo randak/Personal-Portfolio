@@ -1,0 +1,8 @@
+randak_relationship:
+    resource: "@RandakRelationshipBundle/Resources/config/routing.yml"
+    prefix:   /indigo
+
+kristian_randall_portfolio:
+    resource: "@RandakPortfolioBundle/Resources/config/routing.yml"
+    prefix:   /
+
